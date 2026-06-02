@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Исламские финансы в Центральной Азии — Fido Biznes 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1e3461;
+  --navy-mid: #2D4F94;
+  --orange: #F37928;
+  --orange-light: #f5954a;
+  --bg: #f0f2f7;
+  --text: #1a1a2e;
+  --text-muted: #6b7280;
+  --border: #e2e8f0;
+  --sidebar: 240px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"Inter",sans-serif; background:var(--bg); color:var(--text); display:flex; min-height:100vh; font-size:14px; line-height:1.6; }
+.sidebar { width:var(--sidebar); background:var(--navy); position:fixed; top:0; left:0; height:100vh; overflow-y:auto; z-index:100; display:flex; flex-direction:column; }
+.sidebar::-webkit-scrollbar { width:4px; }
+.sidebar::-webkit-scrollbar-thumb { background:rgba(255,255,255,0.15); border-radius:2px; }
+.sb-logo { padding:18px 18px 12px; border-bottom:1px solid rgba(255,255,255,0.08); }
+.sb-logo img { height:28px; filter:brightness(0) invert(1); display:block; margin-bottom:5px; }
+.sb-logo-sub { color:rgba(255,255,255,.4); font-size:11px; }
+.sb-nav { padding:14px 0; flex:1; }
+.sb-label { color:rgba(255,255,255,.3); font-size:10px; font-weight:600; letter-spacing:1.1px; text-transform:uppercase; padding:0 18px; margin-bottom:6px; }
+.sb-item { display:flex; align-items:center; gap:9px; padding:7px 18px; text-decoration:none; color:rgba(255,255,255,.55); font-size:12.5px; transition:all .15s; }
+.sb-item:hover { background:rgba(255,255,255,.07); color:white; }
+.sb-item.active { background:var(--orange); color:white; font-weight:500; }
+.sb-num { font-size:10px; font-weight:600; opacity:.65; min-width:16px; }
+.sb-divider { height:1px; background:rgba(255,255,255,.08); margin:6px 16px; }
+.sb-footer { padding:12px 18px; border-top:1px solid rgba(255,255,255,.08); }
+.sb-footer-badge { background:var(--orange); color:white; font-size:11px; font-weight:600; padding:4px 9px; border-radius:4px; display:inline-block; }
+.main { margin-left:var(--sidebar); flex:1; min-width:0; }
+.hero { background:var(--navy); padding:44px 56px 52px; position:relative; overflow:hidden; width:100%; }
+.hero-bg { position:absolute; inset:0; background-image:url("pattern-mandala.jpg"); background-size:cover; background-position:center; opacity:.06; pointer-events:none; }
+.hero-glow { position:absolute; top:-80px; right:-80px; width:500px; height:500px; background:radial-gradient(circle,rgba(243,121,40,.1) 0%,transparent 65%); pointer-events:none; }
+.hero-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(243,121,40,.18); border:1px solid rgba(243,121,40,.45); color:var(--orange-light); font-size:11.5px; font-weight:500; padding:5px 12px; border-radius:20px; margin-bottom:20px; position:relative; z-index:1; }
+.hero-badge::before { content:"●"; font-size:7px; }
+.hero h1 { color:white; font-size:36px; font-weight:700; line-height:1.2; margin-bottom:8px; max-width:700px; position:relative; z-index:1; }
+.hero-sub { color:rgba(255,255,255,.5); font-size:15px; margin-bottom:26px; position:relative; z-index:1; }
+.hero-callout { background:rgba(255,255,255,.055); border-left:3px solid var(--orange); border-radius:0 8px 8px 0; padding:18px 22px; max-width:800px; margin-bottom:14px; position:relative; z-index:1; }
+.hero-callout p { color:rgba(255,255,255,.82); font-size:14px; line-height:1.75; margin-bottom:10px; }
+.hero-callout p:last-child { margin-bottom:0; }
+.hero-meta { display:flex; gap:22px; margin-top:22px; position:relative; z-index:1; flex-wrap:wrap; }
+.hero-meta-item { display:flex; align-items:center; gap:6px; color:rgba(255,255,255,.4); font-size:12px; }
+.content { padding:48px 56px 80px; width:100%; }
+.section { margin-bottom:60px; width:100%; }
+.section-header { display:flex; align-items:center; gap:13px; margin-bottom:18px; }
+.section-num { background:var(--navy); color:rgba(255,255,255,.45); font-size:11px; font-weight:600; width:28px; height:28px; border-radius:5px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.section h2 { font-size:21px; font-weight:700; color:var(--text); }
+.section p { color:#374151; font-size:14px; line-height:1.78; margin-bottom:14px; }
+.stat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:22px 0; }
+.stat-card { background:white; border:1px solid var(--border); border-radius:9px; padding:18px 18px 14px; position:relative; }
+.stat-card::after { content:""; position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--navy-mid),var(--navy)); border-radius:0 0 9px 9px; }
+.stat-value { font-size:24px; font-weight:700; color:var(--navy-mid); margin-bottom:5px; }
+.stat-label { font-size:12px; color:var(--text-muted); line-height:1.4; padding-right:22px; }
+.stat-ref { position:absolute; top:14px; right:14px; width:18px; height:18px; background:var(--orange); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:10px; font-style:italic; font-weight:700; }
+.callout { border-radius:8px; padding:16px 20px; margin:16px 0; display:flex; gap:12px; }
+.callout.blue { background:rgba(45,79,148,.06); border:1px solid rgba(45,79,148,.15); }
+.callout.yellow { background:#fffbeb; border:1px solid #fcd34d; }
+.callout.orange { background:rgba(243,121,40,.06); border:1px solid rgba(243,121,40,.2); }
+.callout.dark { background:rgba(30,52,97,.07); border:1px solid rgba(30,52,97,.15); }
+.callout-icon { font-size:18px; line-height:1; flex-shrink:0; margin-top:1px; }
+.callout-body strong { font-size:13.5px; color:var(--text); display:block; margin-bottom:5px; }
+.callout-body p { font-size:13px; color:#4b5563; margin-bottom:0; line-height:1.6; }
+.checklist { list-style:none; margin:14px 0; }
+.checklist li { display:flex; align-items:flex-start; gap:10px; padding:9px 14px; background:white; border:1px solid var(--border); border-radius:7px; margin-bottom:5px; font-size:13.5px; color:#374151; line-height:1.55; }
+.checklist li::before { content:""; width:18px; height:18px; min-width:18px; background:var(--navy-mid); border-radius:3px; flex-shrink:0; margin-top:2px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:center; }
+.checklist li strong { color:var(--navy-mid); margin-right:4px; white-space:nowrap; }
+.tag-row { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
+.tag { background:var(--navy-mid); color:white; font-size:12.5px; font-weight:500; padding:6px 14px; border-radius:5px; }
+.tl-item { display:flex; gap:16px; margin-bottom:18px; }
+.tl-icon { width:36px; height:36px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+.tl-icon.check { background:rgba(45,79,148,.1); color:var(--navy-mid); border:2px solid var(--navy-mid); }
+.tl-icon.orange { background:rgba(243,121,40,.1); color:var(--orange); border:2px solid var(--orange); }
+.tl-icon.clock { background:#f3f4f6; color:#9ca3af; border:2px solid #e5e7eb; }
+.tl-date { font-size:10px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:.8px; margin-bottom:3px; }
+.tl-title { font-size:14px; font-weight:600; color:var(--text); margin-bottom:4px; }
+.tl-desc { font-size:13px; color:#6b7280; line-height:1.55; }
+.data-table { width:100%; border-collapse:collapse; margin:18px 0; background:white; border-radius:9px; overflow:hidden; border:1px solid var(--border); }
+.data-table thead tr { background:var(--navy-mid); }
+.data-table th { color:white; font-size:12px; font-weight:600; padding:11px 15px; text-align:left; }
+.data-table td { padding:13px 15px; font-size:13px; color:#374151; border-bottom:1px solid var(--border); vertical-align:top; }
+.data-table tr:last-child td { border-bottom:none; }
+.data-table td:first-child { font-weight:600; color:var(--text); }
+.data-table td:last-child { color:var(--text-muted); font-style:italic; }
+.issue-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:16px 0; }
+.issue-card { background:white; border-left:3px solid var(--orange); border-radius:0 7px 7px 0; padding:12px 15px; font-size:13px; color:#374151; border-top:1px solid var(--border); border-bottom:1px solid var(--border); border-right:1px solid var(--border); }
+.region-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:18px 0; }
+.region-card { background:white; border:1px solid var(--border); border-radius:9px; padding:20px; }
+.region-card.highlighted { border-color:var(--orange); border-width:2px; }
+.region-badge { display:inline-block; font-size:11px; font-weight:600; padding:3px 9px; border-radius:10px; margin-bottom:10px; }
+.badge-green { background:#d1fae5; color:#065f46; }
+.badge-blue { background:#dbeafe; color:#1e40af; }
+.badge-gray { background:#f3f4f6; color:#374151; }
+.badge-orange { background:rgba(243,121,40,.12); color:var(--orange); }
+.region-name { font-size:15px; font-weight:700; color:var(--text); margin-bottom:8px; }
+.region-card p { font-size:13px; color:#6b7280; margin-bottom:0; line-height:1.55; }
+.cta-block { background:var(--navy-mid); border-radius:12px; padding:32px 40px; margin:48px 0; position:relative; overflow:hidden; }
+.cta-block::after { content:""; position:absolute; right:-60px; top:-60px; width:300px; height:300px; background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%); }
+.cta-badge { background:var(--orange); color:white; font-size:11px; font-weight:700; padding:3px 9px; border-radius:4px; display:inline-block; margin-bottom:14px; letter-spacing:.5px; }
+.cta-block h3 { color:white; font-size:22px; font-weight:700; margin-bottom:12px; max-width:520px; }
+.cta-block p { color:rgba(255,255,255,.72); font-size:13.5px; line-height:1.65; max-width:540px; margin-bottom:22px; }
+.cta-buttons { display:flex; gap:12px; flex-wrap:wrap; }
+.btn-primary { background:var(--orange); color:white; font-size:13.5px; font-weight:600; padding:10px 20px; border-radius:7px; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:6px; text-decoration:none; }
+.btn-secondary { background:rgba(255,255,255,.12); color:white; font-size:13.5px; font-weight:500; padding:10px 18px; border-radius:7px; border:1px solid rgba(255,255,255,.25); cursor:pointer; display:inline-flex; align-items:center; gap:6px; text-decoration:none; }
+.source-item { display:flex; gap:20px; padding:20px 0; border-bottom:1px solid var(--border); align-items:flex-start; width:100%; }
+.source-item:last-child { border-bottom:none; }
+.source-qr { width:80px; flex-shrink:0; text-align:center; }
+.source-qr img { width:72px; height:72px; border-radius:6px; display:block; }
+.source-qr-label { font-size:10px; color:#9ca3af; margin-top:4px; }
+.source-num { width:26px; height:26px; border:2px solid var(--orange); color:var(--orange); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0; margin-top:3px; text-decoration:none; transition:all .15s; }
+.source-num:hover { background:var(--orange); color:white; }
+.source-body { flex:1; min-width:0; }
+.source-title { font-size:14px; font-weight:600; color:var(--text); margin-bottom:5px; }
+.source-org { font-size:12px; color:var(--orange); font-weight:500; margin-bottom:7px; }
+.source-desc { font-size:13px; color:#6b7280; line-height:1.6; margin-bottom:7px; }
+.source-tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px; }
+.source-tag { background:#f3f4f6; color:#6b7280; font-size:11px; padding:2px 8px; border-radius:10px; }
+.source-url { font-size:11px; color:#9ca3af; font-family:monospace; word-break:break-all; }
+.sources-label { font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:20px; }
+.gloss-table { width:100%; border-collapse:collapse; margin:18px 0; background:white; border-radius:9px; overflow:hidden; border:1px solid var(--border); }
+.gloss-table thead tr { background:var(--navy-mid); }
+.gloss-table th { color:white; font-size:12px; font-weight:600; padding:11px 15px; text-align:left; }
+.gloss-table td { padding:13px 15px; font-size:13px; color:#374151; border-bottom:1px solid var(--border); vertical-align:top; }
+.gloss-table tr:last-child td { border-bottom:none; }
+.gloss-table td:first-child { font-weight:600; color:var(--text); }
+.gloss-table td:last-child { color:var(--text-muted); font-style:italic; }
+.page-footer { background:white; border-top:1px solid var(--border); padding:18px 56px; display:flex; align-items:center; gap:20px; color:var(--text-muted); font-size:12px; }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sb-logo">
+    <img src="Logo.png" alt="fido-biznes" onerror="this.style.display='none'">
+    <div class="sb-logo-sub">Аналитический гайд 2026</div>
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-label">Содержание</div>
+    <a href="#s00" class="sb-item active"><span class="sb-num">00</span>О чём этот гайд</a>
+    <a href="#s01" class="sb-item"><span class="sb-num">01</span>Что происходит в мире</a>
+    <a href="#s02" class="sb-item"><span class="sb-num">02</span>Почему ЦА — новый рынок</a>
+    <a href="#s03" class="sb-item"><span class="sb-num">03</span>Узбекистан: что изменилось</a>
+    <a href="#s04" class="sb-item"><span class="sb-num">04</span>Как устроены продукты</a>
+    <a href="#s05" class="sb-item"><span class="sb-num">05</span>Почему АБС не справится</a>
+    <a href="#s06" class="sb-item"><span class="sb-num">06</span>Учёт: в чём разница</a>
+    <a href="#s07" class="sb-item"><span class="sb-num">07</span>Исламский финтех</a>
+    <a href="#s08" class="sb-item"><span class="sb-num">08</span>Регион: кто где стоит</a>
+    <a href="#s09" class="sb-item"><span class="sb-num">09</span>Что будет дальше</a>
+    <div class="sb-divider"></div>
+    <a href="#glossary" class="sb-item"><span class="sb-num">—</span>Глоссарий</a>
+    <a href="#sources" class="sb-item"><span class="sb-num">i</span>Источники</a>
+  </nav>
+  <div class="sb-footer">
+    <div class="sb-footer-badge">Май 2026</div>
+    <div style="color:rgba(255,255,255,.35);font-size:11px;margin-top:6px">Для банков, МФО и финтех-компаний</div>
+  </div>
+</aside>
+
+<main class="main">
+
+<div class="hero" id="s00">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-badge">Закон подписан · март 2026</div>
+  <h1>Исламские финансы в Центральной Азии</h1>
+  <p class="hero-sub">Гайд для банков, МФО и финтех-компаний</p>
+  <div class="hero-callout">
+    <p><strong>Рынок, о котором годами говорили «скоро», наконец запустился.</strong> В марте 2026 года Узбекистан принял закон об исламском банкинге. Глобальные активы сектора достигли $5,98 трлн, регион может вырасти до $6,3 млрд к 2033 году.</p>
+    <p>Казахстан, Кыргызстан и Таджикистан уже прошли этот путь — с разными результатами. Главный урок: исламский банкинг это не продуктовая надстройка, а отдельный технологический контур. Этот гайд объясняет, как устроен рынок, где сложности и что делать прямо сейчас.</p>
+  </div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      ~25 минут на чтение
+    </div>
+    <div class="hero-meta-item">
+      <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      9 разделов + глоссарий
+    </div>
+    <div class="hero-meta-item">
+      <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+      Банки, МФО, финтех
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+<div class="section" id="s01">
+  <div class="section-header"><div class="section-num">01</div><h2>Что происходит в мире: $5,98 трлн и почему это важно</h2></div>
+  <p>Исламские финансы давно вышли за рамки региональной или религиозной ниши. Сегодня это полноценная международная индустрия с собственной регуляторной архитектурой, стандартами отчётности и инфраструктурой: банки, инвестиционные фонды, сукук (исламские ценные бумаги), такафул (исламское страхование), исламский финтех и инфраструктурное финансирование.</p>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-value">$5,98 трлн</div><div class="stat-label">Глобальные активы в 2024 году, рост +21% год к году</div><div class="stat-ref">i</div></div>
+    <div class="stat-card"><div class="stat-value">$6,3 млрд</div><div class="stat-label">Прогноз активов Центральной Азии к 2033 году</div><div class="stat-ref">i</div></div>
+    <div class="stat-card"><div class="stat-value">$5,6 млрд</div><div class="stat-label">Прогноз рынка сукук в регионе к 2033 году</div><div class="stat-ref">i</div></div>
+  </div>
+  <p>Крупнейшие рынки по объёму активов: Малайзия, Саудовская Аравия, ОАЭ, Индонезия, Турция. <sup style="color:var(--orange);font-weight:600">2</sup> В последние годы исламские финансы всё чаще позиционируются не только как религиозно-ориентированная модель, но и как финансирование, совместимое с ESG-принципами, обеспеченное реальными активами и устойчивое к спекулятивным рискам.</p>
+  <div class="callout blue">
+    <div class="callout-icon">🌍</div>
+    <div class="callout-body">
+      <strong>В Великобритании 30% немусульман готовы рассмотреть переход к исламскому финансовому провайдеру <sup style="color:var(--orange)">3</sup></strong>
+      <p>Это подтверждает: исламский банкинг конкурирует не только за религиозную аудиторию, но и за тех, кто ищет прозрачные, этичные и понятные финансовые условия.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="s02">
+  <div class="section-header"><div class="section-num">02</div><h2>Почему Центральная Азия становится новым рынком</h2></div>
+  <p>Центральная Азия остаётся одним из наиболее недооценённых рынков исламских финансов в мире. При мусульманском большинстве населения во всех пяти странах уровень проникновения исламских финансовых продуктов остаётся минимальным — что одновременно означает структурный дефицит предложения и значительный потенциал роста.</p>
+  <ul class="checklist">
+    <li>Мусульманское большинство при крайне низком уровне проникновения исламских финансов</li>
+    <li>Активная цифровизация банковского сектора и рост МФО создают платформенный спрос</li>
+    <li>Поиск новых источников инвестиций и диверсификации капитала на уровне государств</li>
+    <li>Интерес со стороны инвесторов из стран Персидского залива к региону</li>
+    <li>Последовательное формирование законодательной базы в Узбекистане, Казахстане, Кыргызстане и Таджикистане</li>
+  </ul>
+  <p>По прогнозам ЕАБР (Евразийский банк развития), совокупные банковские активы исламского сектора региона могут превысить $6,3 млрд к 2033 году, а рынок сукук — достичь $5,6 млрд. При этом текущая база остаётся небольшой, что означает высокий потенциал роста. <sup style="color:var(--orange);font-weight:600">1</sup></p>
+</div>
+
+<div style="background:var(--navy-mid);height:4px;margin:0 -56px 60px"></div>
+
+<div class="section" id="s03">
+  <div class="section-header"><div class="section-num">03</div><h2>Узбекистан 2026: что изменилось и что теперь возможно</h2></div>
+  <p>Узбекистан стал последним крупным рынком Центральной Азии, сформировавшим законодательную основу для исламского банкинга. Принятие закона в 2026 году завершает первый регуляторный цикл в регионе и открывает практический этап внедрения.</p>
+  <div style="margin:20px 0">
+    <div class="tl-item">
+      <div class="tl-icon check"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+      <div><div class="tl-date">27 МАРТА 2026</div><div class="tl-title">Подписан Закон № ЗРУ-1126</div><div class="tl-desc">Закон о внедрении исламского банкинга и исламских окон. Формирует правовую основу для исламских финансовых услуг, инвестиционных депозитов и исламских финансовых операций в рамках традиционных банков.</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-icon orange"><svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="currentColor"/></svg></div>
+      <div><div class="tl-date">29 ИЮНЯ 2026</div><div class="tl-title">Закон вступает в силу</div><div class="tl-desc">Переход от этапа обсуждений к практическому внедрению: банки могут открывать исламские окна, ЦБ формирует нормативы, рынок перестаёт быть пилотным.</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-icon clock"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <div><div class="tl-date">ПАРАЛЛЕЛЬНО</div><div class="tl-title">Центральный банк формирует нормативную базу</div><div class="tl-desc">Разрабатываются новые балансовые счета, механизмы учёта исламских операций, модели отчётности и подходы к шариатскому комплаенсу.</div></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-icon clock"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <div><div class="tl-date">ДО 2026</div><div class="tl-title">Пилотный этап: Orient Finans Bank (OFB)</div><div class="tl-desc">Один из первых банковских кейсов в стране — исламские финансовые продукты тестировались ещё до окончательного формирования нормативной базы, создав практический прецедент для рынка. В рамках пилотного проекта Orient Finans Bank (OFB) продукты исламского финансирования были реализованы на базе программного обеспечения FB NKO компании Fido Biznes.</div></div>
+    </div>
+  </div>
+  <div class="callout yellow">
+    <div class="callout-icon">💡</div>
+    <div class="callout-body">
+      <strong>Контекст важен: Узбекистан не первый в регионе, но потенциально самый крупный рынок</strong>
+      <p>Казахстан, Кыргызстан и Таджикистан уже прошли начальный регуляторный путь. Узбекистан входит в рынок с самой большой экономикой и населением в регионе — что принципиально меняет масштаб задачи.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="s04">
+  <div class="section-header"><div class="section-num">04</div><h2>Как устроены исламские продукты: исламское окно изнутри</h2></div>
+  <p>Исламское окно (Islamic Window) — это механизм, позволяющий традиционному банку предоставлять исламские финансовые услуги без создания отдельного юридического лица. Это наиболее распространённая модель первого этапа внедрения исламского банкинга — именно с неё начинали Кыргызстан, Казахстан и теперь Узбекистан.</p>
+  <div class="callout dark">
+    <div class="callout-icon">⚙️</div>
+    <div class="callout-body">
+      <strong>Что обязательно для исламского окна</strong>
+      <p>Полная сегрегация средств клиентов исламского и традиционного сегментов, отдельный баланс и учёт операций, независимый шариатский надзор, а также раздельная отчётность перед регулятором.</p>
+    </div>
+  </div>
+  <p>На практике большинство банков недооценивают именно инфраструктурную сложность открытия Islamic Window. Проблема заключается не в самих продуктах — мурабаха или ижара технически относительно несложны. Основной вызов связан с тем, что существующие core banking-системы (АБС) изначально проектировались под процентную модель и не поддерживают полноценный раздельный учёт без существенной адаптации.</p>
+  <table class="data-table">
+    <thead><tr><th>Термин</th><th>Значение</th><th>Как работает на практике</th></tr></thead>
+    <tbody>
+      <tr><td>Мурабаха</td><td>Торговое финансирование с фиксированной наценкой</td><td>Банк покупает товар и перепродаёт клиенту с наценкой — клиент платит частями</td></tr>
+      <tr><td>Ижара</td><td>Исламский аналог аренды или лизинга</td><td>Банк покупает актив и сдаёт его в аренду клиенту</td></tr>
+      <tr><td>Мудараба</td><td>Партнёрская модель распределения прибыли</td><td>Партнёрская модель, которая может использоваться как для финансирования клиента банком, так и для привлечения банком инвестиционных средств клиентов с последующим распределением прибыли.</td></tr>
+      <tr><td>Мушарака</td><td>Совместное участие в проекте или бизнесе</td><td>Оба вкладывают деньги, оба несут риск и делят результат</td></tr>
+      <tr><td>Вакала</td><td>Агентская модель управления средствами</td><td>Клиент поручает банку управлять деньгами за фиксированное вознаграждение</td></tr>
+      <tr><td>Сукук</td><td>Исламские ценные бумаги</td><td>Аналог облигаций, но обеспечены реальным активом, а не долгом</td></tr>
+      <tr><td>Такафул</td><td>Исламское страхование</td><td>Участники вносят взносы в общий фонд взаимопомощи</td></tr>
+      <tr><td>Салам</td><td>Финансирование с отсроченной поставкой товара</td><td>Банк платит полную цену товара сейчас, продавец обязуется поставить товар в будущем</td></tr>
+      <tr><td>Параллельный салам</td><td>Двойная сделка салам для управления рисками поставки</td><td>Два независимых договора салам, заключаемых для управления риском поставки. В рамках данной структуры банк заключает отдельный договор салам с производителем и отдельный договор салам с покупателем. Эти договоры не связаны между собой и действуют независимо друг от друга.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div style="background:var(--navy-mid);height:4px;margin:0 -56px 60px"></div>
+
+<div class="section" id="s05">
+  <div class="section-header"><div class="section-num">05</div><h2>Почему обычная АБС не справится с исламскими продуктами</h2></div>
+  <p>Запуск исламского банкинга ставит перед финансовыми организациями инфраструктурные вопросы, которые не решаются на уровне продуктовых шаблонов. Это системная задача: адаптация технологической платформы под принципиально иную финансовую логику.</p>
+  <div class="callout yellow">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-body">
+      <strong>Классическая АБС не подходит для исламского банкинга без существенной доработки</strong>
+      <p>Большинство современных банковских систем проектировались под процентную модель: единый пул ликвидности, стандартные кредитные продукты, линейная логика начислений. Исламский банкинг требует другой архитектуры.</p>
+    </div>
+  </div>
+  <ul class="checklist">
+    <li><strong>Сегрегация средств:</strong> исламские и традиционные активы не могут смешиваться — требуется отдельный пул ликвидности и изолированные финансовые контуры</li>
+    <li><strong>Договорная логика:</strong> каждая исламская транзакция строится вокруг конкретного актива или торговой операции, а не вокруг долга</li>
+    <li><strong>Шариатский комплаенс:</strong> отдельный контроль соответствия операций нормам — встроенный слой проверки в системе</li>
+    <li><strong>Казначейский контроль:</strong> отдельное исламское казначейство с собственными инструментами управления ликвидностью</li>
+    <li><strong>API-интеграции:</strong> модульная архитектура позволяет подключать исламские продукты как отдельные контуры без переписывания ядра системы</li>
+  </ul>
+  <div class="callout dark">
+    <div class="callout-icon">🏗️</div>
+    <div class="callout-body">
+      <strong style="font-size:13px;font-weight:500;line-height:1.5">Банки, которые запускают исламские продукты поверх традиционной АБС без полноценной перестройки системы, как правило, сталкиваются с операционными проблемами уже на этапе масштабирования.</strong>
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="s06">
+  <div class="section-header"><div class="section-num">06</div><h2>Учёт и отчётность: в чём принципиальная разница</h2></div>
+  <p>Учёт и отчётность в исламском банкинге — отдельная дисциплина, которая существенно отличается от стандартной банковской практики. Международные стандарты разработаны организацией AAOIFI (Accounting and Auditing Organization for Islamic Financial Institutions).</p>
+  <div class="callout blue">
+    <div class="callout-icon">📊</div>
+    <div class="callout-body">
+      <strong>Ключевые отличия учёта</strong>
+      <p>В классическом банке доход — это процент на остаток. В исламском банке доход формируется как торговая наценка (мурабаха), арендный платёж (ижара) или доля в прибыли (мудараба/мушарака). Каждая из этих моделей требует собственной логики начисления, признания выручки и резервирования.</p>
+    </div>
+  </div>
+  <ul class="checklist">
+    <li><strong>AAOIFI-стандарты:</strong> охватывают бухгалтерский учёт, аудит, управление и шариатский комплаенс — ориентир для регуляторов и банков региона</li>
+    <li><strong>Инвестиционные счета:</strong> депозиты в исламском банке — это не обязательство, а инвестиционный счёт с участием в прибылях и убытках</li>
+    <li><strong>Раздельная отчётность:</strong> отчётность по исламскому окну должна формироваться системой автоматически</li>
+    <li><strong>Дефицит кадров:</strong> в регионе критически мало специалистов, совмещающих знания исламского банкинга и банковского учёта</li>
+  </ul>
+  <div class="issue-grid">
+    <div class="issue-card">Нехватка специалистов с экспертизой в AAOIFI-учёте</div>
+    <div class="issue-card">Отсутствие зрелого исламского казначейства в регионе</div>
+    <div class="issue-card">Дефицит локальных IT-решений под специфику учёта</div>
+    <div class="issue-card">Регуляторные пробелы в части отчётности исламских окон</div>
+  </div>
+</div>
+
+<div style="background:var(--navy-mid);height:4px;margin:0 -56px 60px"></div>
+
+<div class="section" id="s07">
+  <div class="section-header"><div class="section-num">07</div><h2>Исламский финтех: следующий этап развития рынка</h2></div>
+  <p>Цифровизация переводит исламские финансы в новую среду. Если первый этап развития рынка был связан с банками и МФО, второй этап строится вокруг технологических платформ: онлайн-онбординга, встроенных финансовых сервисов и API-архитектур.</p>
+  <div class="tag-row">
+    <span class="tag">Онлайн-мурабаха</span>
+    <span class="tag">Исламский BNPL (покупай сейчас — плати потом)</span>
+    <span class="tag">Встроенные финсервисы</span>
+    <span class="tag">Цифровой онбординг</span>
+    <span class="tag">API-интеграции</span>
+    <span class="tag">Открытый банкинг</span>
+    <span class="tag">Цифровая идентификация</span>
+    <span class="tag">Исламские инвестплатформы</span>
+  </div>
+  <p>Для МФО исламский финтех особенно перспективен: торговое финансирование, рассрочки и партнёрские модели для малого бизнеса хорошо ложатся на цифровые платформы. Именно здесь появляются первые сценарии внедрения в регионе — в том числе через платформенные решения, поддерживающие модели мурабаха и мушарака в микрофинансовом секторе (Vafo Moliya, Zaytun Moliya и другие МФО Узбекистана).</p>
+  <div class="callout orange">
+    <div class="callout-icon">📱</div>
+    <div class="callout-body">
+      <strong>Islamic fintech — это не отдельный продукт, а инфраструктурный слой</strong>
+      <p>Банк или МФО, запускающие цифровые исламские продукты, сталкиваются с той же задачей, что и при запуске исламского окна: нужна платформа, поддерживающая раздельный учёт, логику активов и шариатский комплаенс — на уровне архитектуры, а не надстройки.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="s08">
+  <div class="section-header"><div class="section-num">08</div><h2>Казахстан, Кыргызстан, Таджикистан, Узбекистан: кто где стоит</h2></div>
+  <p>Четыре страны региона прошли разные пути развития исламского банкинга. Сравнительный анализ позволяет выделить ключевые уроки для Узбекистана.</p>
+  <div class="region-grid">
+    <div class="region-card">
+      <div class="region-badge badge-green">Наиболее зрелый рынок</div>
+      <div class="region-name">Казахстан</div>
+      <p>Наиболее развитая инфраструктура в регионе: исламские банки, выпуск сукук, такафул, МФЦА. При этом доля исламских финансов в совокупных банковских активах пока составляет менее 0,5% — рынок остаётся в ранней фазе, несмотря на зрелость регулирования.</p>
+    </div>
+    <div class="region-card">
+      <div class="region-badge badge-blue">Пионер исламских окон</div>
+      <div class="region-name">Кыргызстан</div>
+      <p>Фактически стал первым рынком исламских окон в Центральной Азии — ещё в 2016 году. Портфель исламского банкинга вырос на 38% в 2023 году. Накоплен практический операционный опыт.</p>
+    </div>
+    <div class="region-card">
+      <div class="region-badge badge-gray">Первый отдельный закон</div>
+      <div class="region-name">Таджикистан</div>
+      <p>Стал первой страной региона с отдельным законом об исламском банкинге. Активы исламского сектора оцениваются около $36 млн при ежегодном росте ~29%. Рынок небольшой, но последовательный.</p>
+    </div>
+    <div class="region-card highlighted">
+      <div class="region-badge badge-orange">Запуск 2026 · Крупнейший потенциал</div>
+      <div class="region-name">Узбекистан</div>
+      <p>Последний из крупных рынков региона, принявший закон. Самая большая экономика и население в Центральной Азии. Имеет возможность использовать опыт соседних стран для построения более зрелой инфраструктуры.</p>
+    </div>
+  </div>
+  <div class="callout orange">
+    <div class="callout-icon">📌</div>
+    <div class="callout-body">
+      <strong>Ключевой вывод из регионального опыта</strong>
+      <p>Ни один рынок не достиг значимой доли исламских финансов без решения инфраструктурного вопроса. Казахстан показывает: развитое регулирование без технологической платформы даёт менее 0,5% проникновения. Кыргызстан и Таджикистан показывают, что при правильно выбранной нише рынок способен демонстрировать кратный рост — до 29–38% в год даже на раннем этапе.</p>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--navy-mid);height:4px;margin:0 -56px 60px"></div>
+
+<div class="section" id="s09">
+  <div class="section-header"><div class="section-num">09</div><h2>Что будет дальше и что делать уже сейчас</h2></div>
+  <p>Развитие исламских финансов в Центральной Азии в ближайшее десятилетие будет определяться тремя параллельными процессами: регуляторным созреванием, технологической инфраструктурой и рыночным спросом.</p>
+  <ul class="checklist">
+    <li><strong>2026–2027:</strong> запуск исламских окон в банках Узбекистана, формирование стандартов учёта и отчётности, появление первых цифровых исламских продуктов</li>
+    <li><strong>2027–2029:</strong> первые локальные сукук, рост исламского МФО-сектора, формирование кадрового рынка специалистов по исламским финансам</li>
+    <li><strong>2030–2035:</strong> выход исламских активов региона к прогнозным $6,3 млрд, формирование регионального рынка капитала, интеграция с международными исламскими финансовыми центрами (Малайзия, ОАЭ, Казахстан/МФЦА)</li>
+  </ul>
+  <div class="callout orange">
+    <div class="callout-icon">📍</div>
+    <div class="callout-body">
+      <strong>Для Узбекистана ближайшие 2–3 года — определяющие</strong>
+      <p>Именно сейчас закладывается технологическая и регуляторная архитектура рынка. Страны, которые решат инфраструктурный вопрос правильно на старте, получат конкурентное преимущество в привлечении капитала из стран Персидского залива и в развитии цифрового исламского банкинга.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="glossary">
+  <div class="section-header"><div class="section-num">—</div><h2>Глоссарий: базовые термины и модели</h2></div>
+  <table class="gloss-table">
+    <thead><tr><th>Термин</th><th>Значение</th><th>Контекст применения</th></tr></thead>
+    <tbody>
+      <tr><td>Мурабаха</td><td>Торговое финансирование с фиксированной наценкой</td><td>Наиболее распространённый продукт: банк покупает товар и перепродаёт клиенту с наценкой, клиент платит частями</td></tr>
+      <tr><td>Ижара</td><td>Исламский аналог аренды или лизинга</td><td>Банк покупает актив (оборудование, недвижимость) и сдаёт в аренду клиенту</td></tr>
+      <tr><td>Мудараба</td><td>Партнёрская модель: капитал + управление</td><td>Партнёрская модель, которая может использоваться как для финансирования клиента банком, так и для привлечения банком инвестиционных средств клиентов с последующим распределением прибыли.</td></tr>
+      <tr><td>Мушарака</td><td>Совместное участие в проекте</td><td>Оба партнёра вкладывают капитал, делят и прибыль, и риски</td></tr>
+      <tr><td>Вакала</td><td>Агентская модель</td><td>Клиент поручает банку управлять средствами за фиксированное вознаграждение</td></tr>
+      <tr><td>Сукук</td><td>Исламские ценные бумаги</td><td>Аналог облигаций, обеспечены реальным активом, а не долговым обязательством</td></tr>
+      <tr><td>Такафул</td><td>Исламское страхование</td><td>Взаимная модель: участники вносят взносы в общий фонд и поддерживают друг друга при наступлении убытка</td></tr>
+      <tr><td>AAOIFI</td><td>Международная организация стандартов исламских финансов</td><td>Устанавливает бухгалтерские, аудиторские и шариатские стандарты — обязательный ориентир при построении учёта</td></tr>
+      <tr><td>Исламское окно</td><td>Исламский сервис внутри традиционного банка</td><td>Банк открывает отдельный контур для исламских операций без создания отдельного юрлица</td></tr>
+      <tr><td>МФЦА</td><td>Международный финансовый центр «Астана»</td><td>Казахстанская юрисдикция с отдельным регулированием, включая исламские финансы — опорная точка для привлечения капитала из региона Персидского залива</td></tr>
+      <tr><td>Салам</td><td>Финансирование с отсроченной поставкой товара</td><td>Банк платит полную стоимость товара сейчас, поставщик обязуется поставить его в будущем — применяется в агро- и сырьевом финансировании</td></tr>
+      <tr><td>Параллельный салам</td><td>Двойная сделка салам для хеджирования риска поставки</td><td>Два независимых договора салам, заключаемых для управления риском поставки. В рамках данной структуры банк заключает отдельный договор салам с производителем и отдельный договор салам с покупателем. Эти договоры не связаны между собой и действуют независимо друг от друга.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="cta-block">
+  <div class="cta-badge">FIDO BIZNES</div>
+  <h3>Строите исламский финансовый продукт?</h3>
+  <p>Fido Biznes уже работает с исламскими финансовыми продуктами в Узбекистане — от платформенных решений для МФО до поддержки банков при запуске исламских окон. Для банков, МФО и финтех-компаний, рассматривающих запуск исламских финансовых продуктов, Fido Biznes предлагает инфраструктурную и технологическую поддержку.</p>
+  <div class="cta-buttons">
+
+    <a href="https://www.linkedin.com/company/fido-biznes-uz/posts/?feedView=all" target="_blank" class="btn-secondary">LinkedIn ↗</a>
+  </div>
+</div>
+
+<div class="section" id="sources">
+  <div class="sources-label">Источники и исследования</div>
+  <div class="source-item">
+    <div class="source-qr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFK0lEQVR4nO3dwZHVMBBFUYYiD6IgIQIjIaIgkmGrBbforu4ne3HPcvDIAl7J+rLU/+Pz8/OL9C9fn+6A3stwCBkOIcMhZDiEDIeQ4RD6Rn/w/cfP9Zv9+f3rv9ec96XrK31L/27l71LR7c/N/xdHDiHDIWQ4hHDOcZo8XyvPyO41lWdwZX6w1Q7pzg+6c4v0/4sjh5DhEDIcQqU5x2nrWdidQ3RV5hmTn1f6P5mjJOY33TYdOYQMh5DhEGrPOW6arD105zTda8hkrWLrfc0WRw4hwyFkOIRePedIrx+cP5/sI+nOY26+Q5lw5BAyHEKGQ6g953jDZ/Gt9xpb+zm6cxHqQ/d3K+1MOHIIGQ4hwyFUmnMkzkpMdNcPttZLTpP7Vtrp9iHBkUPIcAgZDiGcc9xcz9h6ft/sT7cdsrWnNcGRQ8hwCBkOoQ+qQ5p43t9cV9j63Up/KrbWYG7++ztyCBkOIcMhNNrP0X1mT/ZaVkzOm0zmLpVrJu9cuir7ZOn6kyOHkOEQMhxCuM5xevMaw9YZkKfqbWyd6XUPqa4yHEKGQ2hU+3zrGTl57lb6dqJ7peuSTe57s7bYyZFDyHAIGQ6h0R7SxOf4rc/3N+t6Ve51c33iNLmXI4eQ4RAyHEKldY705+ybe0Qq7Tx1361rtuaLjhxChkPIcAiV1jkm7xrSn+m7+yVPk76lv3s2Udu0W2fdkUPIcAgZDqH2HtKuxLuPSjvU5lZ9z61aZFvrE1v/nidHDiHDIWQ4hEb1OW7+vOvm3GKrTbqG2kzPPxw5hAyHkOEQGq1zbJ2bndyLrqm0WfG2Wl6J73BxP4faDIeQ4RAqrXOcEs9Uan/y3iR9zuXmPKbbn611I0cOIcMhZDiESnVIJ3UmJs/XSh9I5SxuunZq5V6Vn3fnN9bnUJzhEDIcQqV3K6etZza5WUM9sdfkqdqsZPIuxpFDyHAIGQ6h+HfZT2qV3mwz8bunrdpoNzlyCBkOIcMhtFYT7GZd8+57k8R7kMT3oaTP77ifQ2sMh5DhEBp9x1v6+sR7mUofEu13+7C1ljOZxzhyCBkOIcMhtHZuhWzNJ8jWOVKSmA/dnMNN+uDIIWQ4hAyH0Fp9joqbZ1/f3J907dRuO8451GY4hAyHUPvcyinxWT+9j6QiUavj5vrK1jsgRw4hwyFkOISu7udI1Bjd6idJnJXt9qHbn61+OnIIGQ4hwyFUOrdSuaZ7TqR7r8p9K21Ozo9U2qdr0jXQKn2g9okjh5DhEDIcQqM9pOlaGom9Gon1ksl9E3U4tv6OjhxChkPIcAiNvld2Il0ztCuxHkO26sFX2qRrKhw5hAyHkOEQKtUhnaBn4dYzfmv+cfPM7aSdiq29Jo4cQoZDyHAIjdY5ttYDnqqx0f3drq066JP7WodUEYZDyHAIjc7KTtz8HpOnzsVs9TNRB4yuOTlyCBkOIcMhNDq30kVnWyr3vbm+kq7zMbl+6/1RhSOHkOEQMhxCpf0cifMjlXO2lTbT72XS70cS/Xc/h+IMh5DhEGrvIX2q5maiBlelpgihe1X62X0PslWfw3UOrTEcQoZDKH5upSLxjuBmfRG6b2VeUjnLk94LQhw5hAyHkOEQesWco6v7XCeTGqbd+Ufl55Pf3ZpnnBw5hAyHkOEQas85tp5nW/VJb36HC9laO9k6t7LVpiOHkOEQMhxCpTlH4gxLukbFqbsXpDsn6O47SZ+PpWvcz6E1hkPIcAg9Vp9D7+fIIWQ4hAyHkOEQMhxChkPIcAj9BaCV3bFg7gdsAAAAAElFTkSuQmCC" alt="QR"><div class="source-qr-label">Открыть ↗</div></div>
+    <a href="https://eabr.org/en/analytics/special-reports/the-future-of-islamic-finance-in-central-asia/" target="_blank" class="source-num">1</a>
+    <div class="source-body">
+      <div class="source-title">The Future of Islamic Finance in Central Asia</div>
+      <div class="source-org">ЕАБР + IsDB Institute + LSEG · 2025</div>
+      <div class="source-desc">Совместный аналитический отчёт трёх организаций по всем пяти странам Центральной Азии: прогнозы активов, рынок сукук, регуляторная среда и рекомендации по развитию.</div>
+      <div class="source-tags"><span class="source-tag">разделы 01</span><span class="source-tag">02</span><span class="source-tag">03</span></div>
+      <div class="source-url">eabr.org/en/analytics/special-reports/the-future-of-islamic-finance-in-central-asia/</div>
+    </div>
+  </div>
+  <div class="source-item">
+    <div class="source-qr"><img src="data:image/png;base64,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" alt="QR"><div class="source-qr-label">Открыть ↗</div></div>
+    <a href="https://lseg.com/en/data-analytics/islamic-finance/islamic-market-intelligence/islamic-finance-development-report-2025" target="_blank" class="source-num">2</a>
+    <div class="source-body">
+      <div class="source-title">Islamic Finance Development Report 2025 (IFDI)</div>
+      <div class="source-org">LSEG + ICD · 2025</div>
+      <div class="source-desc">Ежегодный глобальный бенчмарк исламских финансов по 140 странам. Глобальные активы $5,98 трлн в 2024 году — рост на 21% год к году. Рейтинг рынков: Малайзия, Саудовская Аравия, ОАЭ, Индонезия.</div>
+      <div class="source-tags"><span class="source-tag">раздел 01</span></div>
+      <div class="source-url">lseg.com/en/data-analytics/islamic-finance/islamic-market-intelligence/islamic-finance-development-report-2025</div>
+    </div>
+  </div>
+  <div class="source-item">
+    <div class="source-qr"><img src="data:image/png;base64,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" alt="QR"><div class="source-qr-label">Открыть ↗</div></div>
+    <a href="https://www.gatehousebank.com/news/gatehouse-bank-publishes-new-report-urging-government-to-level-the-playing-field-for-islamic-finance" target="_blank" class="source-num">3</a>
+    <div class="source-body">
+      <div class="source-title">UK Islamic Finance: Levelling the Playing Field</div>
+      <div class="source-org">Gatehouse Bank · 2025</div>
+      <div class="source-desc">Опрос 2006 респондентов в Великобритании. 88% мусульман и 30% немусульман готовы рассмотреть переход к исламскому провайдеру. Рынок исламских финансов в Великобритании — £6,1 млрд в 2024 году.</div>
+      <div class="source-tags"><span class="source-tag">раздел 05</span></div>
+      <div class="source-url">gatehousebank.com/news/gatehouse-bank-publishes-new-report-urging-government-to-level-the-playing-field-for-islamic-finance</div>
+    </div>
+  </div>
+  <div class="source-item">
+    <div class="source-qr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFIUlEQVR4nO3dzY3VQBBFYQaRB1GQEIGREFEQybDtBUeqUtVtG+l8y8HP9jyu2j39U/74/Pz8Iv3L16dvQO9lOIQMh5DhEDIcQoZDyHAIfaN/+P7j5/rF/vz+9c/zV37evTf6LOled+veEsd30e9iyyFkOIQMhxD2OU7d5/ep+4ysPF+7fRf6bPe6p0r/g85Z+WxF+v/FlkPIcAgZDqFSn+O0NcZQ6TdMxhsq1+qajG1072cyTlO5boUth5DhEDIcQu0+xxZ6Rk76BDf7IpO5mK1xjjRbDiHDIWQ4hB7rc2z9rT9ZY7HVJ5j0dSbnSbPlEDIcQoZDqN3nSD8Lu8/+rfGDyfwInWcyF7PVj5mw5RAyHEKGQ6jU50jsleiOMfwvPyeT81fOmWDLIWQ4hAyH0MdTNcESax4r19raF5O41tvYcggZDiHDIVSqzzF5TpPEvMPWvd1c+9nti2ytXa1cy5ZDyHAIGQ6hV4xzbI0rnCafrZg8y9NzIlv9P1sOIcMhZDiEXjfOkV5LUbmHyRqLdO3Um/XEbDmEDIeQ4RAqjXNM+hnpeufpPbeJsZDEGIz7VnSV4RAyHELx+hxbNb5Ok/7K1vqMSr8kvReGbH1vthxChkPIcAjhOEdibWNXYo5j67qJ99Kd0vXRnVvRiOEQMhxC7bmVm3MiJL1fo2KrP5RYf+oaUsUZDiHDIRR5x9tWX2Tr/Imxh+7x3b7X1rtjJv0qWw4hwyFkOIRKcys35xG650nXOK9cd+u7Sr/zxbkVrTEcQoZDqF37PLGeYzL/sjWf0v0db77bJdGnqbDlEDIcQoZDaLRvZeuZ97b9rnSeyjxI5Zynyfvbtvb0ElsOIcMhZDiEsM8xWUNQOWYyhtF1c81H97oT6e/TlkPIcAgZDqH2XlmyVas0/c6zyT7YtK29P1trTWw5hAyHkOEQWqtDSsenn+vp96pMrpu+B7K1V8iWQ8hwCBkOoXifY2LSX3nzHtrK/aS/c+dWNGI4hAyH0NX3rdA5n6oZOrnPp/YDp7+3ky2HkOEQMhxC7X0rW+tGK7bWKFR+nqjdTrbe85K+li2HkOEQMhxCo5pgp5vPwso5K9LjBOk1HIk1pydbDiHDIWQ4hNo1wSrHJOYCKtciifrrZKv2KN1PZR9s97PElkPIcAgZDqH2OEf3GLL1t3hi3KVisl8mXQvE960oznAIGQ6hUk2wRG3Qm3s9uveTGP9I197YqrV6suUQMhxChkNoVPucJN5ttlVzs3LOrfe8dMceJmMV3e/ZvbIaMRxChkMI+xyTZ3zl591jyNZYy6T/QffTPZ48VR/FlkPIcAgZDqH2+1Ymf4t35xES60W6JvM43d9rsn7FuRVdZTiEDIdQvCYYHU/n36plvtU/mPQJttZwJDi3ohHDIWQ4hEp9joT0PlU6Z7pvlNgHmxhDqpzflkPIcAgZDqHSeo4t3fma7jlvjqPcrFvave5kzenJlkPIcAgZDqHSvpXE2EP3uol1FVt7X7fqdD21X5fYcggZDiHDIdTeK7u1FyOxP3arVgfpjit099mSSb9t8v9lyyFkOIQMh1CkPkfFZJ/FaWsshNysmz45z9a+mJMth5DhEDIcQo/1OSq2anNVzpnol6THXSb1Sd0rqxHDIWQ4hEbvsp9IjB+ka2lM7qdyre5nJ30sxzk0YjiEDIfQ2ntlu7p1PxM10Ss/Pz01z1KRqO1hyyFkOIQMh9Bj9Tn0frYcQoZDyHAIGQ4hwyFkOIQMh9Bf0KfMc8p3tK8AAAAASUVORK5CYII=" alt="QR"><div class="source-qr-label">Открыть ↗</div></div>
+    <a href="https://norma.uz/novoe_v_zakonodatelstve/v_uzbekistane_vnedryaetsya_islamskoe_finansirovanie" target="_blank" class="source-num">4</a>
+    <div class="source-body">
+      <div class="source-title">Закон Республики Узбекистан № ЗРУ-1126</div>
+      <div class="source-org">О внедрении исламской банковской деятельности в Узбекистане · 27 марта 2026</div>
+      <div class="source-desc">Закон внёс изменения в Налоговый и Гражданский кодексы, а также в 7 других законодательных актов. Разработан Центральным банком совместно с международными экспертами. Вступает в силу 29 июня 2026 года.</div>
+      <div class="source-tags"><span class="source-tag">раздел 03</span></div>
+      <div class="source-url">norma.uz/novoe_v_zakonodatelstve/v_uzbekistane_vnedryaetsya_islamskoe_finansirovanie</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="page-footer">
+  <img src="Logo.png" alt="fido-biznes" style="height:22px;opacity:.4" onerror="this.style.display:none">
+  <span>© 2026 Fido Biznes · Все права защищены</span>
+</div>
+
+</main>
+
+<script>
+const sections = document.querySelectorAll('[id^="s0"],[id^="s1"],#glossary,#sources');
+const navItems = document.querySelectorAll('.sb-item');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navItems.forEach(i => i.classList.remove('active'));
+      const a = document.querySelector('.sb-item[href="#' + e.target.id + '"]');
+      if (a) a.classList.add('active');
+    }
+  });
+}, {threshold: 0.25});
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
